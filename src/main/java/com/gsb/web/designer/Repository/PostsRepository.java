@@ -1,5 +1,6 @@
-package com.gsb.web.designer.domain.posts;
+package com.gsb.web.designer.Repository;
 
+import com.gsb.web.designer.domain.posts.Posts;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

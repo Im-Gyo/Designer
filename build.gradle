@@ -19,7 +19,8 @@ apply plugin: 'io.spring.dependency-management'
 
 group 'com.gsb.web'
 version '1.0.4-SNAPSHOT'
-sourceCompatibility = 1.8
+sourceCompatibility = '11'
+//sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -28,12 +29,21 @@ repositories {
 
 /*의존성 선언부*/
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.projectlombok:lombok')
-    compile('org.springframework.boot:spring-boot-starter-data-jpa')
-    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
-    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.7.2'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    runtimeOnly 'mysql:mysql-connector-java'
+
+//    compile('org.springframework.boot:spring-boot-starter-web')
+//    compile('org.projectlombok:lombok')
+//    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+//    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+//    testCompile('org.springframework.boot:spring-boot-starter-test')
+//    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.7.2'
+//    implementation 'org.mariadb.jdbc:mariadb-java-client:2.7.2'
 }
 
 /*
