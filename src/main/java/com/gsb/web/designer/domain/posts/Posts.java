@@ -22,12 +22,12 @@ public class Posts {
     private String content;
 
     private String author;
-
+/*
     @Column(nullable = false)
     private String status;
 
     @Column(nullable = false)
-    private String category;
+    private String category;*/
 
     @Builder
     public Posts(String title, String content, String author){
